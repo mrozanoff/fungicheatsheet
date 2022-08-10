@@ -1,41 +1,4 @@
-<script>
- function filter(event, filterCol) {
-  let element = event.target;
-  let condt1 = document.getElementsByClassName(filterCol);
-  var table = document.getElementById("listingTable");
-      
-    for (let i = 0; i < condt1.length; i++) {
-      if (condt1[i].innerHTML.toLocaleUpperCase() == element.value.toLocaleUpperCase()) {
-        if (element.checked == true) {
-           condt1[i].parentElement.closest('tr').style = "display:table-row"
 
-        } else {
-           condt1[i].parentElement.closest('tr').style = "display:none"
-        }
-      }
-
-  }
-}
-
-document.querySelectorAll('.option1').forEach(input => input.addEventListener('input', ()=>filter(event,"check1")));
-document.querySelectorAll('.option2').forEach(input => input.addEventListener('input', ()=>filter(event,"check2")));
-document.querySelectorAll('.option3').forEach(input => input.addEventListener('input', ()=>filter(event,"check3")));
-document.querySelectorAll('.option4').forEach(input => input.addEventListener('input', ()=>filter(event,"check4")));
-document.querySelectorAll('.option5').forEach(input => input.addEventListener('input', ()=>filter(event,"check5")));
-document.querySelectorAll('.option6').forEach(input => input.addEventListener('input', ()=>filter(event,"check6")));
-document.querySelectorAll('.option7').forEach(input => input.addEventListener('input', ()=>filter(event,"check7")));
-document.querySelectorAll('.option8').forEach(input => input.addEventListener('input', ()=>filter(event,"check8")));
-
-
-var checkList = document.getElementById('list1');
-checkList.getElementsByClassName('anchor')[0].onclick = function(evt) {
-  if (checkList.classList.contains('visible'))
-    checkList.classList.remove('visible');
-  else
-    checkList.classList.add('visible');
-}
-
-</script>
 
 
 <style type="text/css">
@@ -110,7 +73,7 @@ td:nth-child(7), td:nth-child(4), td:nth-child(8), td:nth-child(10), td:nth-chil
     <li><label>Pink<input class="option1" type="checkbox" value="Pink" checked/></label></li>
   </ul>
 </div>
-<div id="list1" class="dropdown-check-list" tabindex="100">
+<div id="list2" class="dropdown-check-list" tabindex="100">
   <span class="anchor">Spore Print Colour 2</span>
   <ul class="items">
     <li><label>Chocolate-Brown<input class="option2" type="checkbox" value="Chocolate-Brown" checked/></label></li>
@@ -143,7 +106,7 @@ td:nth-child(7), td:nth-child(4), td:nth-child(8), td:nth-child(10), td:nth-chil
     <li><label>Reddish-Brown<input class="option2" type="checkbox" value="Reddish-Brown" checked/></label></li>
   </ul>
 </div>
-<div id="list1" class="dropdown-check-list" tabindex="100">
+<div id="list3" class="dropdown-check-list" tabindex="100">
   <span class="anchor">Habitat</span>
   <ul class="items">
     <li><label>Ground<input class="option3" type="checkbox" value="Ground" checked/></label></li>
@@ -154,7 +117,7 @@ td:nth-child(7), td:nth-child(4), td:nth-child(8), td:nth-child(10), td:nth-chil
     <li><label>Cones<input class="option3" type="checkbox" value="Cones" checked/></label></li>
   </ul>
 </div>
-<div id="list1" class="dropdown-check-list" tabindex="100">
+<div id="list4" class="dropdown-check-list" tabindex="100">
   <span class="anchor">Size</span>
   <ul class="items">
     <li><label>Medium<input class="option4" type="checkbox" value="Medium" checked/></label></li>
@@ -162,7 +125,7 @@ td:nth-child(7), td:nth-child(4), td:nth-child(8), td:nth-child(10), td:nth-chil
     <li><label>Small<input class="option4" type="checkbox" value="Small" checked/></label></li>
   </ul>
 </div>
-<div id="list1" class="dropdown-check-list" tabindex="100">
+<div id="list5" class="dropdown-check-list" tabindex="100">
   <span class="anchor">Unique Cap Features</span>
   <ul class="items">
     <li><label>Fibrous<input class="option5" type="checkbox" value="Fibrous" checked/></label></li>
@@ -185,7 +148,7 @@ td:nth-child(7), td:nth-child(4), td:nth-child(8), td:nth-child(10), td:nth-chil
     <li><label>Umbo<input class="option5" type="checkbox" value="Umbo" checked/></label></li>
   </ul>
 </div>
-<div id="list1" class="dropdown-check-list" tabindex="100">
+<div id="list6" class="dropdown-check-list" tabindex="100">
   <span class="anchor">Unique Stipe Features</span>
   <ul class="items">
     <li><label>Hollow<input class="option6" type="checkbox" value="Hollow" checked/></label></li>
@@ -208,7 +171,7 @@ td:nth-child(7), td:nth-child(4), td:nth-child(8), td:nth-child(10), td:nth-chil
     <li><label>nan<input class="option7" type="checkbox" value="nan" checked/></label></li>
   </ul>
 </div>
-<div id="list1" class="dropdown-check-list" tabindex="100">
+<div id="list7" class="dropdown-check-list" tabindex="100">
   <span class="anchor">Gill Attachement</span>
   <ul class="items">
     <li><label>Free<input class="option8" type="checkbox" value="Free" checked/></label></li>
@@ -48112,3 +48075,56 @@ td:nth-child(7), td:nth-child(4), td:nth-child(8), td:nth-child(10), td:nth-chil
     </tr>
   </tbody>
 </table>
+
+
+<script>
+ function filter(event, filterCol) {
+  let element = event.target;
+  let condt1 = document.getElementsByClassName(filterCol);
+  var table = document.getElementById("listingTable");
+      
+    for (let i = 0; i < condt1.length; i++) {
+      if (condt1[i].innerHTML.toLocaleUpperCase() == element.value.toLocaleUpperCase()) {
+        if (element.checked == true) {
+           condt1[i].parentElement.closest('tr').style = "display:table-row"
+
+        } else {
+           condt1[i].parentElement.closest('tr').style = "display:none"
+        }
+      }
+
+  }
+}
+
+document.querySelectorAll('.option1').forEach(input => input.addEventListener('input', ()=>filter(event,"check1")));
+document.querySelectorAll('.option2').forEach(input => input.addEventListener('input', ()=>filter(event,"check2")));
+document.querySelectorAll('.option3').forEach(input => input.addEventListener('input', ()=>filter(event,"check3")));
+document.querySelectorAll('.option4').forEach(input => input.addEventListener('input', ()=>filter(event,"check4")));
+document.querySelectorAll('.option5').forEach(input => input.addEventListener('input', ()=>filter(event,"check5")));
+document.querySelectorAll('.option6').forEach(input => input.addEventListener('input', ()=>filter(event,"check6")));
+document.querySelectorAll('.option7').forEach(input => input.addEventListener('input', ()=>filter(event,"check7")));
+document.querySelectorAll('.option8').forEach(input => input.addEventListener('input', ()=>filter(event,"check8")));
+
+// function myFunction(a) {
+//   a.parentNode.getElementsByClassName("dropdown-check-list")[0].classList.toggle("show");
+// }
+
+var checkList = document.getElementById('list1');
+checkList.getElementsByClassName('anchor')[0].onclick = function(evt) {
+  if (checkList.classList.contains('visible'))
+    checkList.classList.remove('visible');
+  else
+    checkList.classList.add('visible');
+}
+
+var checkList2 = document.getElementById('list2');
+checkList.getElementsByClassName('anchor')[1].onclick = function(evt) {
+  if (checkList.classList.contains('visible'))
+    checkList.classList.remove('visible');
+  else
+    checkList.classList.add('visible');
+}
+
+
+
+</script>
