@@ -74,10 +74,10 @@ body{
 
 
 /* CSS to hide key columns */
-th:nth-child(4), th:nth-child(5), th:nth-child(6), th:nth-child(8), th:nth-child(11), th:nth-child(12), th:nth-child(13), th:nth-child(15) {
+th:nth-child(4), th:nth-child(5), th:nth-child(6), th:nth-child(8), th:nth-child(10), th:nth-child(11), th:nth-child(12), th:nth-child(13), th:nth-child(15) {
     display: none
 }
-td:nth-child(4), td:nth-child(5), td:nth-child(6), td:nth-child(8), td:nth-child(11), td:nth-child(12), td:nth-child(13), td:nth-child(15) {
+td:nth-child(4), td:nth-child(5), td:nth-child(6), td:nth-child(8), td:nth-child(10), td:nth-child(11), td:nth-child(12), td:nth-child(13), td:nth-child(15) {
     display: none
 }
 
@@ -169,6 +169,22 @@ table, th, td {
 
 }
 
+thead tr th:first-child,
+tbody tr td:first-child {
+  width: 8em;
+  min-width: 8em;
+  max-width: 8em;
+  /* word-break: break-all; */
+}
+
+thead tr th:nth-child(2),
+tbody tr td:nth-child(2) {
+  width: 8em;
+  min-width: 8em;
+  max-width: 8em;
+  /* word-break: break-all; */
+}
+
 table {
     border-collapse: collapse;
     /* position: relative; */
@@ -176,7 +192,7 @@ table {
     font-family: Verdana, sans-serif;
     padding: 2px;
     background-color: rgba(255, 255, 255, 0.8);
-    font-size: 85%;
+    /* font-size: 100%; */
     /* opacity:0.8; */
     /* z-index: -5; */
 
@@ -190,6 +206,7 @@ th{
     border-bottom: 4px solid rgb(0, 0, 0);
     font-size: 16px;
     background-color: rgba(4, 100, 156, 0.278);
+    hyphens: auto;
 }
 
 td {
@@ -198,6 +215,7 @@ td {
     vertical-align: left;
     padding: 15px;
     font-size: 15px;
+    hyphens: auto;
 
 }
 
